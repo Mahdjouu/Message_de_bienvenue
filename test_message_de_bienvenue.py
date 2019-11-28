@@ -8,3 +8,7 @@ def test_hello_nom():
     assert b.hello_nom(123)=="error"
 
 
+def test_hello_cri():
+    assert b.hello_cri("JERRY") == "HELLO, JERRY !"
+    assert b.hello_cri("bobby") == "error"
+    assert b.hello_cri("Johnny Hallyday") == "error"
