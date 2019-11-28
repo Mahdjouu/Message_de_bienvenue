@@ -8,6 +8,12 @@ def test_hello_nom():
     assert b.hello_nom(123)=="error"
 
 
+def test_hello_cri():
+    assert b.hello_cri("JERRY") == "HELLO, JERRY !"
+    assert b.hello_cri("bobby") == "error"
+    assert b.hello_cri("Johnny Hallyday") == "error"
+
+    
 def test_hello_blank():
     assert b.hello_blank("     ") == "Hello, my friend"
     assert b.hello_blank("") == "Hello, my friend"
@@ -18,5 +24,4 @@ def test_is_blank():
     assert b.is_blank("") == True
     assert b.is_blank("      ") == True
     assert b.is_blank("       a") == False
-
 

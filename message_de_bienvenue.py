@@ -1,6 +1,6 @@
 def hello_nom(nom):
     if isinstance(nom, str):
-        if len(nom)>0:
+        if len(nom) > 0:
             nom = nom[0].upper() + nom[1:]
             hello = "Hello, " + nom
             return hello
@@ -11,6 +11,13 @@ def hello_nom(nom):
         return "error"
 
 
+def hello_cri(nom):
+    if nom == nom.upper():
+        return "HELLO, " + nom + " !"
+    else:
+        return "error"
+
+      
 def hello_blank(string):
     if is_blank(string):
         return "Hello, my friend"
@@ -27,5 +34,3 @@ def is_blank(string):
                 boolean_is_blank = False
             i += 1
     return boolean_is_blank
-
-
