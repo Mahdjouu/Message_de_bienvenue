@@ -8,3 +8,15 @@ def test_hello_nom():
     assert b.hello_nom(123)=="error"
 
 
+def test_hello_blank():
+    assert b.hello_blank("     ") == "Hello, my friend"
+    assert b.hello_blank("") == "Hello, my friend"
+    assert b.hello_blank("bob") == "error"
+
+
+def test_is_blank():
+    assert b.is_blank("") == True
+    assert b.is_blank("      ") == True
+    assert b.is_blank("       a") == False
+
+
