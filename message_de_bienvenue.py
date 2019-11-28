@@ -16,3 +16,21 @@ def hello_cri(nom):
         return "HELLO, " + nom + " !"
     else:
         return "error"
+
+      
+def hello_blank(string):
+    if is_blank(string):
+        return "Hello, my friend"
+    else:
+        return "error"
+
+
+def is_blank(string):
+    boolean_is_blank = True
+    if len(string) != 0:
+        i = 0
+        while i < len(string) and boolean_is_blank == True:
+            if string[i] != " ":
+                boolean_is_blank = False
+            i += 1
+    return boolean_is_blank
