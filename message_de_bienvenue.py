@@ -44,3 +44,19 @@ def hello_deux_noms(noms):
     nom2 = noms[i+1:]
     nom2 = nom2[0].upper() + nom2[1:]
     return hello_nom(nom1) +' ' + nom2
+
+
+def hello_plusieurs_noms(noms):
+    nom = ""
+    noms_traites = ""
+    j = 0
+    for i in range(0, len(noms)):
+        if noms[i] == ",":
+            nom = noms[j:i + 1]
+            nom = nom[0].upper() + nom[1:]
+            noms_traites += nom + " "
+            j = i + 1
+    nom = noms[j:]
+    nom = nom[0].upper() + nom[1:]
+    noms_traites += nom
+    return hello_nom(noms_traites)
