@@ -35,3 +35,7 @@ def test_hello_deux_noms():
 def test_hello_plusieurs_noms():
     assert b.hello_plusieurs_noms("Amy,Bob,Jerry") == "Hello, Amy, Bob, Jerry"
     assert b.hello_plusieurs_noms("mahdjou,aymeric,mike,damien,dang,matthieu") == "Hello, Mahdjou, Aymeric, Mike, Damien, Dang, Matthieu"
+
+
+def test_hello_plusieurs_noms_cris():
+    assert b.hello_plusieurs_noms_cris("Amy,BOB,Jerry") == "Hello Amy, Jerry. AND HELLO, BOB !"

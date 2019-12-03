@@ -60,3 +60,7 @@ def hello_plusieurs_noms(noms):
     nom = nom[0].upper() + nom[1:]
     noms_traites += nom
     return hello_nom(noms_traites)
+
+
+def hello_plusieurs_noms_cris(noms):
+    return "je veux mourir tuez moi AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
