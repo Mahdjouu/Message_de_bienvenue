@@ -17,7 +17,7 @@ def hello_cri(nom):
     else:
         return "error"
 
-      
+
 def hello_blank(string):
     if is_blank(string):
         return "Hello, my friend"
@@ -34,3 +34,13 @@ def is_blank(string):
                 boolean_is_blank = False
             i += 1
     return boolean_is_blank
+
+
+def hello_deux_noms(noms):
+    i = 0
+    while noms[i] != ',' and i < len(noms):
+        i += 1
+    nom1 = noms[0:i+1]
+    nom2 = noms[i+1:]
+    nom2 = nom2[0].upper() + nom2[1:]
+    return hello_nom(nom1) +' ' + nom2
