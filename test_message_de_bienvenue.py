@@ -25,3 +25,8 @@ def test_is_blank():
     assert b.is_blank("      ") == True
     assert b.is_blank("       a") == False
 
+
+def test_hello_deux_noms():
+    assert b.hello_deux_noms("Amy,Bob")=="Hello, Amy, Bob"
+    assert b.hello_deux_noms("Amy,bob") == "Hello, Amy, Bob"
+    assert b.hello_deux_noms("amy,bob") == "Hello, Amy, Bob"
