@@ -38,4 +38,15 @@ def test_hello_plusieurs_noms():
 
 
 def test_hello_plusieurs_noms_cris():
-    assert b.hello_plusieurs_noms_cris("Amy,BOB,Jerry") == "Hello Amy, Jerry. AND HELLO, BOB !"
+    assert b.hello_plusieurs_noms_cris("Amy,BOB,Jerry") == "Hello, Amy, Jerry. AND HELLO, BOB !"
+    assert b.hello_plusieurs_noms_cris("Amy,Bob,Jerry") == "Hello, Amy, Bob, Jerry"
+    assert b.hello_plusieurs_noms_cris("amy,bob,jerry") == "Hello, Amy, Bob, Jerry"
+    assert b.hello_plusieurs_noms_cris("amy,bob,JERRY") == "Hello, Amy, Bob. AND HELLO, JERRY !"
+    assert b.hello_plusieurs_noms_cris("BOB,JERRY,AMY") == "HELLO, BOB, JERRY, AMY !"
+
+
+def test_traitement_plusieurs_noms():
+    assert b.traitement_plusieurs_noms("Amy,BOB,Jerry") == "Amy, Jerry"
+
+def test_traitement_plusieurs_noms_cris():
+    assert b.traitement_plusieurs_noms_cris("Amy,BOB,Jerry") == "BOB"
