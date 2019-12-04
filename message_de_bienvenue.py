@@ -108,3 +108,14 @@ def traitement_plusieurs_noms_cris(noms):
     if len(noms_a_crier) > 0 and noms_a_crier[-2] == ',':
         noms_a_crier = noms_a_crier[0:-2]
     return noms_a_crier
+
+
+def hello_noms_liste_and(noms):
+    hello_traites = hello_plusieurs_noms(noms)
+    index_derniere_virgule = 0
+    for index in range(0, len(hello_traites)):
+        if hello_traites[index] == ',':
+            index_derniere_virgule = index
+    hello_traites = hello_traites[0:index_derniere_virgule] + " and" + hello_traites[index_derniere_virgule + 1:]
+    return hello_traites
+
